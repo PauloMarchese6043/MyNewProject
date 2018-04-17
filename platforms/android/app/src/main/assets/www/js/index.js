@@ -18,20 +18,47 @@
  */
 var app = {
     // Application Constructor
-    initialize: function() {
+    initialize: function () {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+    },
+
+    goClick: function () {
+        /*$("#inputName").on( "vclick", "p", function() {
+            
+        }*/
+        alert($("#inputName").val() + "\n" + $("#inputName").val() + "\n" + $("#inputName").val());
+    },
+
+    findContact: function () {
+
+    },
+
+    deleteContact: function () {
+
+    },
+
+    onPause: function () {
+        alert("Pause");
+    },
+
+    onResume: function () {
+        alert("Resume");
     },
 
     // deviceready Event Handler
     //
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
-    onDeviceReady: function() {
+    onDeviceReady: function () {
         this.receivedEvent('deviceready');
+        document.addEventListener('pause', this.onPause.bind(this), false);
+        document.addEventListener('resume', this.onResume.bind(this), false);
+
+        document.getElementById("goBtn").addEventListener("click", goClick);
     },
 
     // Update DOM on a Received Event
-    receivedEvent: function(id) {
+    receivedEvent: function (id) {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');

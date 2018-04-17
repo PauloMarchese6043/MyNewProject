@@ -9,6 +9,9 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "ait.student.test"
+    },
+    "cordova-plugin-contacts": {
+      "PACKAGE_NAME": "ait.student.test"
     }
   },
   "dependent_plugins": {}
